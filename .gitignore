@@ -53,6 +53,7 @@ ENV/
 **/test/
 **/files/
 **/.history/
+**/working/
 
 # Solution packages (large files, regenerate as needed)
 **/*_managed.zip
