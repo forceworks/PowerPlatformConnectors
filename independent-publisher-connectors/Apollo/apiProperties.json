@@ -5,8 +5,8 @@
         "type": "securestring",
         "uiDefinition": {
           "displayName": "API Key",
-          "description": "Your Apollo.io API Key. Find it in Apollo Settings > Integrations > API Keys",
-          "tooltip": "Enter your Apollo.io API Key",
+          "description": "Your Apollo.io API Key",
+          "tooltip": "Get your API key from Apollo.io Settings > Integrations > API Keys",
           "constraints": {
             "required": "true",
             "tabIndex": 1
