@@ -2,14 +2,31 @@
   "swagger": "2.0",
   "info": {
     "version": "2.0.0",
-    "title": "Apollo Enrichment (Independent Publisher)",
-    "description": "Apollo.io API connector for enriching contacts and accounts with company and people data.",
+    "title": "Apollo Enrichment",
+    "description": "Apollo.io is a sales intelligence platform with a database of over 275 million verified B2B contacts. Enrich your contacts and accounts with company and people data including job titles, phone numbers, LinkedIn profiles, company size, revenue, and more.",
     "contact": {
       "name": "Steve Mordue",
-      "url": "https://github.com/forceworks",
+      "url": "https://forceworks.com",
       "email": "steve@forceworks.com"
+    },
+    "x-ms-api-annotation": {
+      "status": "Production"
     }
   },
+  "x-ms-connector-metadata": [
+    {
+      "propertyName": "Website",
+      "propertyValue": "https://forceworks.com"
+    },
+    {
+      "propertyName": "Privacy policy",
+      "propertyValue": "https://www.apollo.io/privacy-policy"
+    },
+    {
+      "propertyName": "Categories",
+      "propertyValue": "Sales and CRM;Data"
+    }
+  ],
   "host": "api.apollo.io",
   "basePath": "/",
   "schemes": ["https"],
@@ -252,10 +269,9 @@
         },
         "matches": {
           "type": "array",
-          "items": {
-            "$ref": "#/definitions/Person"
-          },
-          "x-ms-summary": "Matches"
+          "x-ms-summary": "Matches",
+          "description": "Array of matched people (null if no match found)",
+          "items": {}
         }
       }
     },
@@ -428,10 +444,9 @@
         },
         "organizations": {
           "type": "array",
-          "items": {
-            "$ref": "#/definitions/Organization"
-          },
-          "x-ms-summary": "Organizations"
+          "x-ms-summary": "Organizations",
+          "description": "Array of matched organizations (null if no match found)",
+          "items": {}
         }
       }
     },
@@ -728,19 +743,5 @@
   },
   "parameters": {},
   "responses": {},
-  "tags": [],
-  "x-ms-connector-metadata": [
-    {
-      "propertyName": "Website",
-      "propertyValue": "https://forceworks.com"
-    },
-    {
-      "propertyName": "Privacy policy",
-      "propertyValue": "https://www.apollo.io/privacy"
-    },
-    {
-      "propertyName": "Categories",
-      "propertyValue": "Sales and CRM;Data"
-    }
-  ]
+  "tags": []
 }
